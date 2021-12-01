@@ -33,5 +33,15 @@ namespace Ucu.Poo.Defense
         {
             this.items.Remove(item);
         }
+
+        public int Total()
+        {
+            int precio_total = 0;
+            foreach(OfferItem item in items)
+            {
+                precio_total += item.SubTotal;
+            }
+            return precio_total;
+        }
     }
 }
